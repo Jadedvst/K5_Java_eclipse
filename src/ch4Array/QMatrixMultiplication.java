@@ -5,21 +5,23 @@ public class QMatrixMultiplication {
 	public static void main(String[] args) {
 		int i;
 		int j;
+		int k;
 		int[][] A = {{1,2,3},
 					 {4,5,6}};
 		int[][] B = {{1,2},
 					 {3,4},
 					 {5,6}};
-		int[][] C = new int [A.length][B.length];
-		int product=0;
+		int[][] C = new int [A.length][B[0].length];
+		
+		
 		for( i=0;i< A.length ;i++) {
-			product=0;
-			for( j=0;j< A.length ;j++) {
-				product += (A[i][j])*(B[j][i]);
+			for( j=0;j< B[i].length ;j++) {
+				for( k=0;k< B.length ;k++) {
+					C[i][j]+= (A[i][k])*(B[k][j]);
+//					System.out.println(C[i][j]);
+				}
 				
-				System.out.println("");
 			}
-			C[i][j] += product;
 		}
 			
 
@@ -30,6 +32,9 @@ public class QMatrixMultiplication {
 			}
 			System.out.println("");
 		}
+		
+			
+
 	}
 
 }
