@@ -1,4 +1,4 @@
-package ch5.Instance;
+package ch5Object.Instance;
 
 //Class
 public class Armor {

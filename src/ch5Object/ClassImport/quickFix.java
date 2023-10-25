@@ -1,4 +1,4 @@
-package ch5.ClassImport;
+package ch5Object.ClassImport;
 //quickFix로 지정된곳으로 바로 이동 가능
 /*package com.ruby.java.test1;
  현 폴더에서 com 안의 ruby 안의 ... 에 파일 생성

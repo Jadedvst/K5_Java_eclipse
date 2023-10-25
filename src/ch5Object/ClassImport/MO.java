@@ -1,4 +1,4 @@
-package ch5.ClassImport;
+package ch5Object.ClassImport;
 import ch5Object.Instance.*;
 public class MO {
 public static void main(String[] args) {

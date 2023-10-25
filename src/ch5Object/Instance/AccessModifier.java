@@ -1,4 +1,4 @@
-package ch5.Instance;
+package ch5Object.Instance;
 
 public class AccessModifier {
 	// == 접근 제한자
