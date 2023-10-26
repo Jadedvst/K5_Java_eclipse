@@ -12,8 +12,8 @@ public class Line extends Geometry {
 //		xArr[1],yArr[1];
 		double leng = Math.sqrt(Math.pow(xArr[0]-xArr[1],2)
 								+ Math.pow(yArr[0]-yArr[1], 2));
-
-		return leng;
+		return xArr[0]-xArr[1];
+		//return leng;
 	}
 
 	@Override
