@@ -1,41 +1,5 @@
 package ch7.Interface.polygon;
 
-
-
- class SimplePoint extends Geometry{
-		public double getLength() {
-			int[] xArr = getXArr();
-			int[] yArr = getYArr();
-			
-			
-//			xArr[0],yArr[0];
-//			xArr[1],yArr[1];
-			double leng = Math.sqrt(Math.pow(xArr[0]-xArr[1],2)
-									+ Math.pow(yArr[0]-yArr[1], 2));
-			return xArr[0]-xArr[1];
-			//return leng;
-		}
-
-		public double getArea() {
-			return 0;
-		}
-	
-}	
-
-
- class SimpleTest{
-	public static void main(String[] args) {
-		SimplePoint s = new SimplePoint();
-		Line l = new Line();
-		l.addPoint(10,20);
-		l.addPoint(40,40);
-		System.out.println("길이 : " + l.getLength());
-		System.out.println("길이 : " + l.getArea());
-		
-	}
-}	
-
-//////////////////////////////////////////////////
 public abstract class Geometry {
 	
 	
@@ -72,11 +36,12 @@ public abstract class Geometry {
 		}
 		
 		
-		xArr[0] = x;
-		yArr[0] = y;
+		
 	}
-
-
+	void clearPoint() {
+		xArr = null;
+		yArr = null;
+	}
 }
 
 

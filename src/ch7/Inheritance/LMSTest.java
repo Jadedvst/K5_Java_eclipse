@@ -15,7 +15,7 @@ public class LMSTest {
 		p.setName("김");
 		p.setAge(52);
 		p.setSubject("빅데이터");
-		p.setHeight(187);
+		p.getHeight(187);
 		
 		s.setName("빈");
 		s.setAge(20);

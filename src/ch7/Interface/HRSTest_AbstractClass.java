@@ -1,7 +1,7 @@
 package ch7.Interface;
 
 //-------------------------------------------------------//
-public class AbstractClass {
+public class HRSTest_AbstractClass {
 	//HRSTest
 	public static void main(String[] args) {
 		Salesman s = new Salesman();

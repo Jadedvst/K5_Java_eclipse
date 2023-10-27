@@ -1,6 +1,6 @@
 package ch7.Inheritance;
 
-public class Student extends Person_Superclass {//Class생성시 Superclass
+public class Student_Modifier extends Person_Superclass {//Class생성시 Superclass
 	//sub class
 	private String major;
 	
