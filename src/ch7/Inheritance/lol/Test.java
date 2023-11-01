@@ -1,4 +1,4 @@
-package ch7.Inheritance.game;
+package ch7.Inheritance.lol;
 
 public class Test {
 

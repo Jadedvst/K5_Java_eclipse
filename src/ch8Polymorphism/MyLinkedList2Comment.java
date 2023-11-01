@@ -47,11 +47,11 @@ public class MyLinkedList2Comment {
 	//노드 추가 Method
 	public void add(String data) {
 		Node newNode = new Node(data); 
-		
+		Node file = head;
 		if(head==null) {
 			head = newNode; //head= Java
 		}else {
-			Node file = head; //1)file: null->Java// 2)Java//
+			 //1)file: null->Java// 2)Java//
 			while(file.next != null) {
 				file = file.next; // 2)file: Java-> JSP//
 			}
@@ -65,12 +65,13 @@ public class MyLinkedList2Comment {
 	}
 	
 	private Node find(String data) {
+		if (head == null) return null;
 		Node file = head;
 		do {
 			if (file.data.equals(data))//"Java"
 				return file; //Java instance
 			file = file.next;
-		}while(file.next != null);
+		}while(file != null);//file.next 인지 file 인지 조심!!!
 		return null;
 	}
 	
@@ -105,6 +106,7 @@ public class MyLinkedList2Comment {
 			p.next = null;
 		}		
 	}
+	
 	public void print() {
 		if (head == null) {
 			System.out.println("등록된 데이터가 없습니다.");

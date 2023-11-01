@@ -66,7 +66,7 @@ public class MyLinkedList2findAdd {
 			if (file.data.equals(data))//"Java"
 				return file; //Java instance
 			file = file.next;
-		}while(file.next != null);
+		}while(file != null);
 		return null;
 	}
 	

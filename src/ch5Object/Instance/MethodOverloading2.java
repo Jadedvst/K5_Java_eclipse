@@ -1,4 +1,4 @@
-package ch5Instance;
+package ch5Object.Instance;
 public class MethodOverloading2 {
 
 //==Method overloading//: 총 함수 종류 줄이기위함,변수만 바꿈

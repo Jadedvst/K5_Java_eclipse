@@ -1,4 +1,4 @@
-package ch7.Inheritance.game;
+package ch7InheritantInterface.Inheritance.lol;
 
 public class Character extends Unit {
 	public Character () {
