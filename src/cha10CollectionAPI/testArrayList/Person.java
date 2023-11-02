@@ -1,16 +1,17 @@
-package ch7.Inheritance;
+package cha10CollectionAPI.testArrayList;
 
-public class Person_Superclass {//Superclass
+public class Person {//Superclass
 	
 	//Private Field
 	private String name;
 	private int age;
 
-	//Public Method
-	public Person_Superclass(String name, int age) {
+	public Person(String name, int age) {
 		this.name=name;
 		this.age = age;
 	}
+
+	//Public Method
 	public String getName() {
 		return name;
 	}

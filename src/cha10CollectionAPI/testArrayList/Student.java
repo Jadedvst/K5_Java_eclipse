@@ -1,13 +1,14 @@
-package ch7.Inheritance;
+package cha10CollectionAPI.testArrayList;
 
-public class Student_Modifier extends Person_Superclass {//Class생성시 Superclass
+public class Student extends Person {//Class생성시 Superclass
 	//sub class
 	private String major;
 	
-	public Student_Modifier(String name, int age, String major) {
+	public Student(String name, int age, String major) {
 		super(name,age);
 		this.major = major;
 	}
+
 	public String getMajor() {
 		return major;
 }
@@ -20,7 +21,7 @@ public class Student_Modifier extends Person_Superclass {//Class생성시 Superc
 	public String toString() {
 		
 //		return name + ":"+ age + major; Error due to  접근제한자(private)
-		return this.getName()+":"+ this.getAge()+":"+major;//getName은 public
+		return super.toString()+":"+major;//getName은 public
 
 	}
 }
