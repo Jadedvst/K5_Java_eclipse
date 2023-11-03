@@ -1,4 +1,4 @@
-package cha10CollectionAPI.testArrayList;
+package cha10CollectionAPI.list.testArrayList;
 
 public class Person {//Superclass
 	

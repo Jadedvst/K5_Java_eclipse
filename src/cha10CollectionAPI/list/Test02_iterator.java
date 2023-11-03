@@ -1,4 +1,4 @@
-package cha10CollectionAPI;
+package cha10CollectionAPI.list;
 
 import java.util.ArrayList;
 import java.util.Iterator;

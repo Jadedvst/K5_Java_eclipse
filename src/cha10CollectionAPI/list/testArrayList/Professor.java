@@ -1,4 +1,4 @@
-package cha10CollectionAPI.testArrayList;
+package cha10CollectionAPI.list.testArrayList;
 
 public class Professor extends Person {//Class생성시 Superclass
 	//sub class

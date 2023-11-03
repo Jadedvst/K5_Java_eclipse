@@ -1,4 +1,4 @@
-package cha10CollectionAPI.testArrayList;
+package cha10CollectionAPI.list.testArrayList;
 
 import java.util.ArrayList;
 import java.util.List;

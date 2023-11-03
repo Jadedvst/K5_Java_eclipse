@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import cha10CollectionAPI.testArrayList.Person;
-import cha10CollectionAPI.testArrayList.Professor;
-import cha10CollectionAPI.testArrayList.Student;
+import cha10CollectionAPI.list.testArrayList.Person;
+import cha10CollectionAPI.list.testArrayList.Professor;
+import cha10CollectionAPI.list.testArrayList.Student;
 
 public class LMSTest {
 
