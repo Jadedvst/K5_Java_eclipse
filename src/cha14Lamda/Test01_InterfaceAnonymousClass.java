@@ -47,6 +47,7 @@ public class Test01_InterfaceAnonymousClass{
 			}
 		}).print();
 		
+		
 		//방법 4: 매개변수
 		test(myc1);//MyInterface를 implement 하고 있어서 myc1 타입을 MyInterface으로 사용가능
 		test(mi);
