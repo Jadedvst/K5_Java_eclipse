@@ -1,4 +1,4 @@
-package assignment_ArraySorting_Lamda;
+package assignments.ArraySorting_Lamda;
 
 /*이미 존재하는 인터페이스
  * public interface Comparator<T>{

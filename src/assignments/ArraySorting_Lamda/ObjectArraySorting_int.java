@@ -1,4 +1,4 @@
-package assignment_ArraySorting_Lamda;
+package assignments.ArraySorting_Lamda;
 
 
 	class Stu_Int implements Comparable<Stu_Int>{

@@ -1,4 +1,4 @@
-package assignment_ArraySorting_Lamda;
+package assignments.ArraySorting_Lamda;
 
 import java.util.Random;
 

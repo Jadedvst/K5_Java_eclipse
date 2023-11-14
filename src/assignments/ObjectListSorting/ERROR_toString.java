@@ -1,4 +1,4 @@
-package assignment_ObjectListSorting;
+package assignments.ObjectListSorting;
 
 import java.util.ArrayList;
 import java.util.List;
