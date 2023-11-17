@@ -31,7 +31,7 @@ class Student2{
 }
 
 
-public class CollectionSorting {
+public class CollectionSorting_Comparator {
 	static void sortStudent(List<Student2> data, Comparator<Student2> comp) {
 
 		Student2 temp;
