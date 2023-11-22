@@ -5,7 +5,7 @@ public class HRSTest_ObjectArr {
 	//HRSTest
 
 	public static void main(String[] args) {
-		Salesman s1 = new Salesman();
+//		Salesman s1 = new Salesman();
 		Employee s2 = new Salesman();
 		Object s3 = new Salesman();
 		
@@ -15,7 +15,7 @@ public class HRSTest_ObjectArr {
 		Object m3 = new Manager();
 		
 		Object arr[] = new Object[6];//Object type 의 배열
-		arr[0] = s1;
+		arr[0] = new Salesman();
 		arr[1] = s2;
 		arr[2] = s3;
 		arr[3] = m1;
