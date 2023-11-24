@@ -2,12 +2,12 @@ package cha11Exceptions;
 
 public class Test04_throws {
 	
-	public void c()  throws Exception{//try-catch 책임 넘기기!
+	public void c()  throws Exception{//try-catch 책임 넘기기! c가 선언된 b()에
 		System.out.println("C1");
 		int v = 10/0;
 		System.out.println("C2");
 	}
-	public void b() throws Exception {
+	public void b() throws Exception {//try-catch 책임 넘기기! b가 선언된 a()에
 		System.out.println("B1");
 		c();
 	
