@@ -1,6 +1,7 @@
+
 // int형 고정 길이 큐
 
-public class IntQueue {
+public class IntQueue_given {
     private int[] que;            // 큐용 배열
     private int capacity;         // 큐의 크기
     private int front;            // 맨 처음 요소 커서
@@ -18,7 +19,7 @@ public class IntQueue {
     }
 
     //--- 생성자(constructor) ---//
-    public IntQueue(int maxlen) {
+    public IntQueue_given(int maxlen) {
         num = front = rear = 0;
         capacity = maxlen;
         try {

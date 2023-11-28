@@ -1,9 +1,9 @@
-package dataStructure.ch4Stack;
+package dataStructure.ch4StackandQueue;
 // int형 고정 길이 스택의 사용 예
 
 import java.util.Scanner;
 
-class IntStackTester {
+class IntStackTester_given {
     public static void main(String[] args) {
         Scanner stdIn = new Scanner(System.in);
         IntStack_given s = new IntStack_given(64);    // 최대 64 개를 푸시할 수 있는 스택

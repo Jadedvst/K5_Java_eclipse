@@ -1,11 +1,12 @@
+
 // int형 고정 길이 큐의 사용 예
 
 import java.util.Scanner;
 
-class IntQueueTester {
+class IntQueueTester_given {
     public static void main(String[] args) {
         Scanner stdIn = new Scanner(System.in);
-        IntQueue s = new IntQueue(64);    // 최대 64개를 인큐할 수 있는 큐
+        IntQueue_given s = new IntQueue_given(64);    // 최대 64개를 인큐할 수 있는 큐
 
         while (true) {
         	System.out.println(" "); // 메뉴 구분을 위한 빈 행 추가
@@ -22,7 +23,7 @@ class IntQueueTester {
                 x = stdIn.nextInt();
                 try {
                     s.enque(x);
-                 } catch (IntQueue.OverflowIntQueueException e) {
+                 } catch (IntQueue_given.OverflowIntQueueException e) {
                     System.out.println("큐가 가득 찼습니다.");
                 }
                 break;
@@ -31,7 +32,7 @@ class IntQueueTester {
                 try {
                      x = s.deque();
                     System.out.println("디큐한 데이터는 " + x + "입니다.");
-                 } catch (IntQueue.EmptyIntQueueException e) {
+                 } catch (IntQueue_given.EmptyIntQueueException e) {
                     System.out.println("큐가 비어 있습니다.");
                 }
                 break;
@@ -40,7 +41,7 @@ class IntQueueTester {
                 try {
                      x = s.peek();
                     System.out.println("피크한 데이터는 " + x + "입니다.");
-                 } catch (IntQueue.EmptyIntQueueException e) {
+                 } catch (IntQueue_given.EmptyIntQueueException e) {
                     System.out.println("큐가 비어 있습니다.");
                 }
                 break;

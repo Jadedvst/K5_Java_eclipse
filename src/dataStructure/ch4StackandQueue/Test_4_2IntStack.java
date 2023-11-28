@@ -1,4 +1,4 @@
-package dataStructure.ch4Stack;
+package dataStructure.ch4StackandQueue;
 
 /*
  * 교재에 있는 소스코드

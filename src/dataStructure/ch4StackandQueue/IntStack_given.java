@@ -1,4 +1,4 @@
-package dataStructure.ch4Stack;
+package dataStructure.ch4StackandQueue;
  // int형 고정 길이 스택
 public class IntStack_given {
     private int[] stk;           // 스택용 배열

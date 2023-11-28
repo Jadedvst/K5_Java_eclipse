@@ -60,6 +60,9 @@ public class Test01 {
 		list.retainAll(list2); print(15,list); //removes all except those in ()=> 교집합
 		list.removeAll(list2); print(16,list); //removes all of () => 차집합
 		
+		String a=list.get(0);
+		System.out.println(a);
+		
 	}
 		public static void print(int n, List<String>list) {
 			System.out.println(n+": "+list);
