@@ -51,7 +51,7 @@ class IntStack {
 
 //--- 스택에 x를 푸시 ---// 스택이 다 차지 않은 이상 제일 위의 (포인터가 있는) 스택에 x push, 그 후 포인터 올리기
 	public int push(int x) throws OverflowIntStackException { //push를 선언한곳
-		if(ptr>=capacity)
+		if(isFull())
 			throw new OverflowIntStackException(); 
 		return stk[ptr++] = x;
 	}
@@ -80,6 +80,8 @@ class IntStack {
 //--- 스택에서 x를 찾아 인덱스(없으면 –1)를 반환 ---//
 	public int indexOf(int x) {
 		//제일 마지막에서 부터 탐색
+		if(isEmpty())
+			System.out.println("스택이 비었습니다.");
 		for(int i=ptr-1;i>=0;i--)
 			if(stk[i]==x)
 				return i;
@@ -119,18 +121,18 @@ class IntStack {
 	}
 }
 
-public class Test_4_2IntStack {
+public class Test4_2IntStack {
 
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 		IntStack s = new IntStack(4); // 최대 64 개를 푸시할 수 있는 스택
-		
+		int menuNum = 0;
 		while (true) {
 			System.out.println(); // 메뉴 구분을 위한 빈 행 추가
 			System.out.printf("현재 데이터 개수: %d / %d\n", s.size(), s.getCapacity());
-			int menuNum = 0;
+			
 			if(menuNum==0) {
-				System.out.print("(1)push　(2)pop　(3)peek　(4)dump (5)clear (9)NEXT MENU (0)종료: ");
+				System.out.print("(1)push　(2)pop　(3)peek　(4)dump (5)indexOf (6)clear stack (9)NEXT MENU (0)종료: ");
 				int menu = stdIn.nextInt();
 				if (menu == 0)
 					break;
@@ -168,17 +170,47 @@ public class Test_4_2IntStack {
 				case 4: // 덤프
 					s.dump();
 					break;
+					
+				case 5: // 인덱스 찾기
+					System.out.print("찾는 값: ");
+					x = stdIn.nextInt();
+					int idx=s.indexOf(x);
+					System.out.println("찾는 값의 인덱스: "+idx);
+					break;
+				case 6:
+					s.clear();
+					System.out.println("스택이 비었습니다");
+					break;
 				case 9:
 					menuNum+=1;
-				
+					break;
 				}
 			}
-			else {
-				System.out.print("(1)clear　(2)indexOf　(3)getCapcity　(4)size　(8)PREVIOUS MENU (9)NEXT MENU (0)종료: ");
-			}
-			
+			if(menuNum==1) {
+				System.out.print("(1)PREVIOUS MENU　(2)getCapcity　(3)size of data　(4)isEmpty (5)isFull (0)종료: ");
+				int menu = stdIn.nextInt();
+				if (menu == 0)
+					break;				
+				switch(menu) {
 				
+				case 1:
+					menuNum-=1;
+					break;
+				case 2:
+					System.out.println(s.getCapacity());
+					break;
+				case 3:
+					System.out.println(s.size());
+					break;
+				case 4:
+					System.out.println(s.isEmpty());
+					break;
+				case 5:
+					System.out.println(s.isFull());
+					break;
 				
+				}
+			}	
 		}
 	}
 }
