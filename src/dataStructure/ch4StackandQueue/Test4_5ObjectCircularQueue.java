@@ -115,7 +115,7 @@ public class Test4_5ObjectCircularQueue {
 				System.out.println("Queue Empty");
 			for(int i=0;i<num;i++) {
 				int idx=(front+i)%QUEUE_SIZE;
-				if(it==que[idx])
+				if(que[idx].equals(it))
 					return idx;
 			}
 			return -1;
@@ -190,10 +190,10 @@ public static void main(String[] args) {
 		
 		case 5: // 인덱스 찾기
 			System.out.print("찾는 값의 x좌표: ");
-//			x = stdIn.nextInt();
+			x = stdIn.nextInt();
 			p.setX(x);
 			System.out.print("찾는 값의 y좌표: ");
-//			y = stdIn.nextInt();
+			y = stdIn.nextInt();
 			p.setY(y);
 			int idx=oq.indexOf(p);
 			System.out.println("찾는 값의 인덱스: "+idx);

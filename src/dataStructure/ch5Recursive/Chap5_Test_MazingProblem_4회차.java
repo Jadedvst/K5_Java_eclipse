@@ -1,14 +1,14 @@
-package dataStructure.ch5Recursive;
+
 
 import java.util.ArrayList;
 import java.util.List;
 
 enum Directions2 {N, NE, E, SE, S, SW, W, NW}
-class Items3 {
+class Items {
 	int x;
 	int y;
 	int dir;
-	public Items3(int x, int y, int d) {
+	public Items(int x, int y, int d) {
 		this.x = x; this.y = y; this.dir = d;
 	}
 	@Override
@@ -24,7 +24,7 @@ class Offsets3 {
 	}
 }
 	class StackList {
-	private List<Items3> data; // 스택용 배열
+	private List<Items> data; // 스택용 배열
 	private int capacity; // 스택의 크기
 	private int top; // 스택 포인터
 
@@ -52,7 +52,7 @@ class Offsets3 {
 	}
 
 	// --- 스택에 x를 푸시 ---//
-	public void push(Items3 p) throws OverflowIntStackException {
+	public void push(Items p) throws OverflowIntStackException {
 		if (top >= capacity) // 스택이 가득 참
 			throw new OverflowIntStackException();
 		data.add(p);top++;
@@ -60,14 +60,14 @@ class Offsets3 {
 	}
 
 	// --- 스택에서 데이터를 팝(정상에 있는 데이터를 꺼냄) ---//
-	public Items3 pop() throws EmptyIntStackException {
+	public Items pop() throws EmptyIntStackException {
 		if (top <= 0) // 스택이 빔
 			throw new EmptyIntStackException();
 		return data.remove(--top);
 	}
 
 	// --- 스택에서 데이터를 피크(peek, 정상에 있는 데이터를 들여다봄) ---//
-	public Items3 peek() throws EmptyIntStackException {
+	public Items peek() throws EmptyIntStackException {
 		if (top <= 0) // 스택이 빔
 			throw new EmptyIntStackException();
 		return data.get(top - 1);
@@ -79,7 +79,7 @@ class Offsets3 {
 	}
 
 	// --- 스택에서 x를 찾아 인덱스(벌견하지 못하면 –1)를 반환 ---//
-	public int indexOf(Items3 x) {
+	public int indexOf(Items x) {
 		for (int i = top - 1; i >= 0; i--) // 정상 쪽에서 선형검색
 			if (data.get(i).equals(x))
 				return i; // 검색 성공
@@ -120,7 +120,7 @@ class Offsets3 {
 
 	public class Chap5_Test_MazingProblem_4회차 {
 
-		static Offsets[] moves = new Offsets[8];//static을 선언하는 이유를 알아야 한다
+		static Offsets3[] moves = new Offsets3[8];//static을 선언하는 이유를 알아야 한다
 
 		public static void path(int[][] maze, int[][] mark, int ix, int iy) {
 
@@ -183,9 +183,9 @@ class Offsets3 {
 					{ 0, 0, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0 },
 					{ 0, 1, 0, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0 }};
 			for (int ia = 0; ia < 8; ia++)
-				moves[ia] = new Offsets(0, 0);//배열에 offsets 객체를 치환해야 한다.
-			moves[0].a = -1;	moves[0].b = 0;
-			moves[1].a = -1;	moves[1].b = 1;
+				moves[ia] = new Offsets3(0, 0);//배열에 Offsets3 객체를 치환해야 한다.
+			moves[0].a = -1;	moves[0].b = 0;//N
+			moves[1].a = -1;	moves[1].b = 1;//NE
 			moves[2].a = 0;		moves[2].b = 1;
 			moves[3].a = 1;		moves[3].b = 1;
 			moves[4].a = 1;		moves[4].b = 0;

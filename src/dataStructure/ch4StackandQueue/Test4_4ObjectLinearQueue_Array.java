@@ -118,8 +118,9 @@ public objectQueue2(int maxlen) {
 			System.out.println("No Queue");
 		for(int i=0;i<num;i++) {
 			int idx=(front+i)%capacity;
-			if(x==que[idx])
+			if(que[idx].equals(x)) {
 				return idx;
+			}
 		}
 		return -1;
 	}
@@ -209,14 +210,14 @@ public class Test4_4ObjectLinearQueue_Array {
 				
 				System.out.print("찾는 값의 x좌표: ");
 				x = stdIn.nextInt();
-//				p.setX(x);
+				p.setX(x);
 				System.out.print("찾는 값의 y좌표: ");
 				y = stdIn.nextInt();
-//				p.setY(y);
-//				Point3 search= new Point3(x,y);
-				int idx=oq.indexOf(search);
+				p.setY(y);
+				int idx=oq.indexOf(p);
 				System.out.println("찾는 값의 인덱스: "+idx);
 				break;
+			
 			case 6:
 				oq.clear();
 				System.out.println("스택이 비었습니다");

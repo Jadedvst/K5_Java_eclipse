@@ -1,5 +1,5 @@
 // 재귀에 대한 이해를 돕는 순수 재귀 메서드
-package dataStructure.ch5Recursive.given;
+package dataStructure.ch5Recursive.given_checked;
 
 import java.util.Scanner;
 
