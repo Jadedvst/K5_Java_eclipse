@@ -22,17 +22,20 @@ public class Test_MazingProblem {
 		//matrix 확인
 		
 //		System.out.println("maze[12,15]::");
-//		showMatrix(maze,1, 13, 16);
+//		showMatrix(maze, 13, 16);
 //		System.out.println("maze[14,17]::");
-//		showMatrix(maze,0, 14, 17);
+//		showMatrix(maze, 14, 17);
+		
+		
 		int[][] mark=input;
-		System.out.println("mark::");
+		System.out.println("maze::");
 		showMatrix(mark, 12, 15);
 		mark=MazingProblem.solution(input);
 		
 		System.out.println("mark::");
 		showMatrix(mark, 12, 15);
-
+		
+		
 	}
 
 //	private static void path(int[][] maze, int[][] mark, int i, int j) {

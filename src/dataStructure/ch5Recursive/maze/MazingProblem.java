@@ -42,8 +42,8 @@ public class MazingProblem {
 		
 		//maze에 따라 mark 남기기
 		int[][] mark = new int[14][17];
-		path(maze, mark, 12, 15, moves);
-	
+		path(maze, mark, 13, 16, moves);
+//		Practice_Path.practice_path(maze, mark, 13, 16, moves);
 		
 		//결과 출력
 		int[][] result = new int[14][17];
@@ -63,7 +63,7 @@ public class MazingProblem {
 		init.r = 1;
 		init.c = 1;
 		init.dir = 2;//E :: 2
-		mark[init.r][init.c]=2; //궤적을 2로 표기
+		mark[init.r][init.c]=1; //궤적을 1로 표기
 		st.push(init); //궤적 기록
 		
 		while(!st.isEmpty()){//stack not empty
@@ -71,21 +71,27 @@ public class MazingProblem {
 			int i = msp.r;
 			int j = msp.c;
 			int d = msp.dir;
-			mark[i][j]=1;//backtracking 궤적은 1로 표시
+			mark[i][j]=3;//backtracking 궤적은 1로 표시
 			while (d < 8) // moves forward
 			{	
 				int g = i+ moves[d].r;
 				int h = j+ moves[d].c;
 				if ((g == ix) && (h == iy)) { // reached exit input값으로 출구 받음
-					break;	// output path
+					mark[i][j]=1;
+					return;	// output path
 				}
 				if ((maze[g][h] == 0) && (mark[g][h] == 0)) { // new position
-					mark[g][h]=2;
-					Mouse newms = new Mouse(g,h,d);
-					st.push(newms);
+					mark[i][j]=1;
+					Mouse ms = new Mouse(0,0,0);//다른 객체를 지녀야함
+					ms.r = i;
+					ms.c = j;
+					ms.dir = d+1; //backtraking 후 경로 재탐색
+					st.push(ms); 
+					i = g;
+					j = h;
+					d = 0;
 				} else {
-					mark[g][h]=maze[g][h];
-					d++;
+					d++;//7까지 체크 후 나감
 				}
 			}
 		}
