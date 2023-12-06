@@ -42,7 +42,7 @@ public class MazingProblem {
 		
 		//maze에 따라 mark 남기기
 		int[][] mark = new int[14][17];
-		path(maze, mark, 13, 16, moves);
+		path(maze, mark, 12, 15, moves); //최종값 주의(12,15)에서 0테두리 추가했으니 1씩 추가
 //		Practice_Path.practice_path(maze, mark, 13, 16, moves);
 		
 		//결과 출력
@@ -71,13 +71,14 @@ public class MazingProblem {
 			int i = msp.r;
 			int j = msp.c;
 			int d = msp.dir;
-			mark[i][j]=3;//backtracking 궤적은 1로 표시
+			mark[i][j]=0;//backtracking 궤적은 0로 표시
 			while (d < 8) // moves forward
 			{	
 				int g = i+ moves[d].r;
 				int h = j+ moves[d].c;
 				if ((g == ix) && (h == iy)) { // reached exit input값으로 출구 받음
 					mark[i][j]=1;
+					mark[g][h]=1;
 					return;	// output path
 				}
 				if ((maze[g][h] == 0) && (mark[g][h] == 0)) { // new position

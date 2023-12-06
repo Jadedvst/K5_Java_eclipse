@@ -137,7 +137,7 @@ public class Chap5_Test_QueenEight_4회차 {
 	public static void SolveQueen(int[][] d) {
 		int count = 0, mode = 0;
 		int ix = 0, iy = 0;
-		Stack3 st = new Stack3(10);
+		Stack3 st = new Stack3(100);
 		Point p = new Point(ix, iy);
 		d[ix][iy] = 1; count++;
 		st.push(p);

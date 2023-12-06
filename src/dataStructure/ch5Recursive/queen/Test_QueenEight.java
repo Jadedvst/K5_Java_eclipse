@@ -12,12 +12,12 @@ public class Test_QueenEight {
 			
 			QueenEight.SolveQueen(data);
 			
-			for (int[] element: data) {
-				for(int j =0; j<data[0].length;j++) {
-					System.out.print(" " + element[j]);
-				}
-				System.out.println();
-			}
+//			for (int[] element: data) {
+//				for(int j =0; j<data[0].length;j++) {
+//					System.out.print(" " + element[j]);
+//				}
+//				System.out.println();
+//			}
 		}
 	}
 
