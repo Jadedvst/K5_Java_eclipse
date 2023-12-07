@@ -89,7 +89,6 @@ public class QueenEight {
 				cnt--;
 				ic++;
 
-				continue;
 			}
 		}
 		

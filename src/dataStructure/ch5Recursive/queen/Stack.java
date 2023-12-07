@@ -24,6 +24,13 @@ class Point {
 	public void setY(int y) {
 		iy = y;
 	}
+
+	@Override
+	public String toString() {
+		return "[" + ix + ", " + iy + "]";
+	}
+	
+	
 }
 
 public class Stack {

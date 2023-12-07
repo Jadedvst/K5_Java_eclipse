@@ -1,7 +1,7 @@
 package dataStructure.ch5Recursive.queen;
 
 
-public class Test_QueenEight {
+public class Test_Eight {
 
 		public static void main(String[] args) {
 			int row = 8, col = 8;

@@ -17,8 +17,10 @@ class QueenBB {
         for (int j = 0; j < 8; j++) {
             if (flag[j] == false) {    // j 행에 퀸을 아직 배치하지 않음
                 pos[i] = j;            // 퀸을 j행에 배치함
-                if (i == 7)            // 모든 열에 배치함
+                if (i == 7) {            // 모든 열에 배치함
                     print();
+                    System.out.println();
+                }
                 else {
                     flag[j] = true;
                     set(i + 1);

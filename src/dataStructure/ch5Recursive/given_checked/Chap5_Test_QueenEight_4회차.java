@@ -1,4 +1,3 @@
-
 //https://www.geeksforgeeks.org/n-queen-problem-backtracking-3/?ref=lbp
 //N Queen problem / backtracking
 /*
@@ -9,6 +8,8 @@
  *  체스판 최대 배치 문제 : king/16, Queen/8, rook/8, bishop/?, knight/?
  *  rook 2개/a, h, knight 2개/b, g, bishop 2개/c, f, queen 1개/black queen은 black 칸에, 폰 8개
  */
+package dataStructure.ch5Recursive.given_checked;
+
 
 class Point {
 	private int ix;
