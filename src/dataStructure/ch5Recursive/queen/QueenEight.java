@@ -184,7 +184,7 @@ public class QueenEight {
     	//주어진 행에 대해 놓을수 있는 col 반환  없을시 -1
 //    	for(int i =col+1;i<d[0].length+col;i++) {
     	for(int i =col;i<d[0].length;i++) {
-    		if(CheckMove(d, row, i%8)) return i%8;
+    		if(CheckMove(d, row, i)) return i;
     	}
     	//for loop 로 check move후 stack에 저장
     	return -1;

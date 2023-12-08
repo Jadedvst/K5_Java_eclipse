@@ -10,7 +10,8 @@ public class Test_Four {
 //				for(int j=0;j<col;j++)
 //					data[i][j]=0;
 			
-			BishopFour.SolveBishop(data);
+			//data, max amount of bishop
+			Bishop.SolveBishop(data, 6);
 			
 		}
 	}

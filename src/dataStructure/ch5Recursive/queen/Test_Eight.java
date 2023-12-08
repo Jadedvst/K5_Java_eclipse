@@ -9,14 +9,9 @@ public class Test_Eight {
 //			for(int i = 0; i<row;i++)
 //				for(int j=0;j<col;j++)
 //					data[i][j]=0;
-			
-			QueenEight.SolveQueen(data);
-			
-//			for (int[] element: data) {
-//				for(int j =0; j<data[0].length;j++) {
-//					System.out.print(" " + element[j]);
-//				}
-//				System.out.println();
+			Bishop.SolveBishop(data, 14);
+//			QueenEight.SolveQueen(data);
+
 //			}
 		}
 	}
