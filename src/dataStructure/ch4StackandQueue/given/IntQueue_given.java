@@ -1,5 +1,6 @@
-
 // int형 고정 길이 큐
+package dataStructure;
+
 
 public class IntQueue_given {
     private int[] que;            // 큐용 배열

@@ -1,4 +1,4 @@
-package ch4Array;
+package Practice;
 
 public class Method_MatrixMultiplication {
 	

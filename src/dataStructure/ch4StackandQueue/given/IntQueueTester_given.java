@@ -1,5 +1,6 @@
-
 // int형 고정 길이 큐의 사용 예
+package dataStructure;
+
 
 import java.util.Scanner;
 

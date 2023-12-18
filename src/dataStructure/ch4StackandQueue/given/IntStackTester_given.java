@@ -1,4 +1,4 @@
-package dataStructure.ch4StackandQueue;
+package dataStructure.ch4StackandQueue.given;
 // int형 고정 길이 스택의 사용 예
 
 import java.util.Scanner;
