@@ -11,10 +11,10 @@ class Sets {
 	public void display(){
 
 		for (int i = 1; i <= n; i++)
-			System.out.print(" " +  i);
+			System.out.printf("%4d",i);
 		System.out.println();
 		for (int i = 1; i <= n; i++)
-			System.out.print(" " + parent[i]);
+			System.out.printf("%4d",parent[i]);
 		System.out.println();
 	}
 
@@ -26,8 +26,11 @@ class Sets {
 		while (parent[i] > 0) i = parent[i];
 		while (parent[j] > 0) j = parent[j];
 		System.out.println("i = " + i + " j = " + j);
-		if (i != j)
+		int temp = parent[i] + parent[j];
+		if (i != j) {
 			parent[j] = i;
+			parent[i] = temp; //-증가 , 자식노드 증가
+		}
 	}
 
 	public int SimpleFind(int i)
@@ -42,7 +45,11 @@ class Sets {
 	// Union sets with roots i and j, i != j, using the weighting rule.
 	// parent[i]~=~-count[i] and parent[i]~=~-count[i].
 	{
+		//루트 찾기
+		while (parent[i] > 0) i = parent[i];
+		while (parent[j] > 0) j = parent[j];
 		int temp = parent[i] + parent[j];
+		if(i==j) return;
 		if (parent[i] > parent[j]) { // i has fewer nodes
 			parent[i] = j;
 			parent[j] = temp;
@@ -73,14 +80,16 @@ class Sets {
 
 public class TreeSet {
 	public static void main(String[] args) {
-
+	
 	Sets s1 = new Sets(20);
+	System.out.println("[SimpleUnion]");
 	s1.SimpleUnion(7,1);s1.SimpleUnion(2,3);s1.SimpleUnion(4,5);s1.SimpleUnion(6,7);
 	s1.SimpleUnion(4,2);s1.SimpleUnion(5,7);s1.SimpleUnion(9,11);s1.SimpleUnion(13,9);
 	s1.display();
 	int n1 = s1.SimpleFind(5);
 	int n2 = s1.SimpleFind(7);
 	System.out.println("5의 parent = " + n1 + "  7의 parent = " + n2);
+	System.out.println("[WeightedUnion]");
 	s1.WeightedUnion(1, 2);
 	s1.WeightedUnion(3, 4);
 	s1.WeightedUnion(5, 6);

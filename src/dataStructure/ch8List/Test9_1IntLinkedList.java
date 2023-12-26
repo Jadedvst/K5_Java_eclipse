@@ -93,6 +93,11 @@ class LinkedList1{
 		}
 		return -1;
 	}
+	
+	public boolean isEmpty() {
+		if (first == null) return true;
+		return false;
+	}
 
 	
 
@@ -154,6 +159,11 @@ public class Test9_1IntLinkedList {
 				list.Add(data);
 				break;
 			case Delete: // 머리 노드 삭제
+				if(list.isEmpty()) {
+					System.out.println("리스트가 비었습니다.");
+					break;
+				}
+				System.out.println("삭제: ");
 				data = sc.nextInt();
 				int num = list.Delete(data);
 				System.out.println("삭제된 데이터는 " + num);
@@ -162,6 +172,11 @@ public class Test9_1IntLinkedList {
 				list.Show();
 				break;
 			case Search: // 회원 번호 검색
+				if(list.isEmpty()) {
+					System.out.println("리스트가 비었습니다.");
+					break;
+				}
+				System.out.println("검색: ");
 				int n = sc.nextInt();
 				boolean result = list.Search(n);
 				if (!result)
