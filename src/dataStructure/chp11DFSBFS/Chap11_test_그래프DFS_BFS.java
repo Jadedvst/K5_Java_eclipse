@@ -1,6 +1,23 @@
-package Chap11_그래프;
+package dataStructure.chp11DFSBFS;
 
 /*
+ Graph G = (V,E) //Vertex{0,1,...5,6}, Edge{(0,1),(1,2),...(6,0)}
+ adjacent: two vertexes in edge relation
+ 
+ Represent 
+ 1)in Array
+ 		   0 1 2 3 (to)
+		0 [0 1 1 0]
+(from)	1 [1 1 1 0]
+		2 [1 1 1 1]
+		3 [0 0 1 0]
+		
+ 2)in Adjacency List
+ 0 → 1 2
+ 1 → 0 1 2
+ 2 → 0 1 2 3
+ 3 → 2
+	 
  Graph Representation
  Adjacency Lists + BFS + DFS
 */

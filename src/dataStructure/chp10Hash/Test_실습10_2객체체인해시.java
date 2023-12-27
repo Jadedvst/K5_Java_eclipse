@@ -1,4 +1,4 @@
-package Chap10_Hashing;
+package dataStructure.chp10Hash;
 
 
 import java.util.Comparator;
@@ -13,8 +13,19 @@ class SimpleObject5 {
 	static final int NAME = 2;
 	String no; // 회원번호
 	String name; // 이름
+	public String getNo() {
+		return no;
+	}
+	public void setNo(String no) {
+		this.no = no;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
 
-	
 }
 
 class ChainHash5 {
@@ -23,16 +34,33 @@ class ChainHash5 {
 		private SimpleObject5 data; // 키값
 		private Node2 next; // 뒤쪽 포인터(뒤쪽 노드에 대한 참조)
 		// --- 생성자(constructor) ---//
-
-		
+		Node2 (SimpleObject5 data, Node2 next){
+			this.data=data;
+			this.next=next;
+		}
+		Node2 (String no, String name, Node2 next){
+			this.data.no = no;
+			this.data.name = name;
+			this.next=next;
+		}
 	}
 
 	private int size; // 해시 테이블의 크기
 	private Node2[] table; // 해시 테이블
-
+	
+//--- 해쉬(hash) ---//
+	int hashValue(SimpleObject5 st) {
+		return st.hashCode()%size;
+	}
+	
 //--- 생성자(constructor) ---//
 	public ChainHash5(int capacity) {
-		
+		try {
+			table = new Node2[capacity];
+			this.size = capacity;
+		}catch(Exception e) {
+			e.getMessage();
+		}
 	}
 
 //--- 키값이 key인 요소를 검색(데이터를 반환) ---//
